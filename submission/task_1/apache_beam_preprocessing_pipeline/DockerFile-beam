@@ -1,0 +1,10 @@
+# Dockerfile-beam
+
+FROM apache/beam_python3.8_sdk:2.33.0
+
+WORKDIR /apache-beam
+
+COPY . /apache-beam
+
+# change path
+ENTRYPOINT ["python", "/apache-beam/apache_beam_data_cleaning.py"] 
